@@ -23,7 +23,7 @@ def wgeticons(message):
     zipname = 'png' + random_zip_name
     icondirname = random_icon_dir_name
     wgetdirname = random_wget_dir_name
-    os.system('wget -k -l 7 -p -E -nc {0} -P {1}'.format(http, wgetdirname))
+    os.system('wget -k -l 7 -p -E -r -nc {0} -P {1}'.format(http, wgetdirname))
     os.system('mkdir {1}'.format(wgetdirname, icondirname))
     a = 'find {0} -name "*.png" |'.format(wgetdirname) # ??? почему так
     b = ' parallel mv "{}"'                            # ??? некрасиво, я
