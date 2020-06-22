@@ -5,5 +5,5 @@ from account.views import register
 
 
 urlpatterns = [
-        url(r'r', views.register, name='register'),
+        url('', views.register, name='register'),
 ]
